@@ -1,17 +1,13 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import './Home.css';
+import Navbar from "../Includes/Navbar/Navbar"
 
-import "./Home.css"
-
-export default function Home() {
+const Home= () =>{
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
-      </Container>
-    </React.Fragment>
+      <div>
+        <Navbar />
+
+      </div>
   );
 }
+export default Home;
