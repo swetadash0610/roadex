@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 import "./Fstyle.css";
-import Form2 from './formNew/Success';
+import Form2 from './formNew/UserForm';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 var issues_ar = [];
-function mainForm() {
+function MainForm() {
     const classes = useStyles();
     const baseUrl = "/get-all-complaints"
     const [clicked, setclicked] = useState(false);
-    const [got, setgot ] = useState(true);   
+    const [got, setgot ] = useState(false);   
     const [popform, setpopform] = useState(false); 
 
     const fetchcomplaints = e =>{
@@ -117,4 +117,4 @@ function mainForm() {
     )
 }
 
-export default mainForm
+export default MainForm

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { Button } from '@material-ui/core';
 
 export class Success extends Component {
   continue = e => {
@@ -9,7 +10,6 @@ export class Success extends Component {
     // PROCESS FORM //
     this.props.nextStep();
   };
-
   back = e => {
     e.preventDefault();
     this.props.prevStep();
@@ -26,7 +26,7 @@ export class Success extends Component {
           >
             <AppBar title="Success" />
             <h1>Thank You For Your Submission</h1>
-            <p>You will get an email with further instructions.</p>
+            <p>Your complaint has been successfully submitted</p>
           </Dialog>
         </>
       </MuiThemeProvider>

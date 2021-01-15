@@ -11,8 +11,8 @@ import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm.js';
-// import PaymentForm from './PaymentForm';
-// import Review from './Review';
+ import PaymentForm from './PaymentForm';
+ import Review from './Review';
 
 function Copyright() {
   return (

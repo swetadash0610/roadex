@@ -28,28 +28,28 @@ export class FormPersonalDetails extends Component {
           >
             <AppBar title="Enter Personal Details" />
             <TextField
-              placeholder="Enter Your Occupation"
-              label="Occupation"
-              onChange={handleChange('occupation')}
-              defaultValue={values.occupation}
+              placeholder="Enter Your Issue"
+              label="Issue"
+              onChange={handleChange('issue')}
+              defaultValue={values.issue}
               margin="normal"
               fullWidth
             />
             <br />
             <TextField
-              placeholder="Enter Your City"
-              label="City"
-              onChange={handleChange('city')}
-              defaultValue={values.city}
+              placeholder="Enter Your locality"
+              label="Locality"
+              onChange={handleChange('locality')}
+              defaultValue={values.locality}
               margin="normal"
               fullWidth
             />
             <br />
             <TextField
-              placeholder="Enter Your Bio"
-              label="Bio"
-              onChange={handleChange('bio')}
-              defaultValue={values.bio}
+              placeholder="Enter Your Pin"
+              label="pin"
+              onChange={handleChange('pin')}
+              defaultValue={values.pin}
               margin="normal"
               fullWidth
             />
