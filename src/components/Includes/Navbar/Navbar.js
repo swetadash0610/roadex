@@ -12,6 +12,7 @@ import "./Navbar.css"
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    height: '10vh'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -39,6 +40,7 @@ export default function Navbar() {
             Roadex
           </Typography>
           <Button color="inherit">Login</Button>
+          <Button color="secondary">Signup</Button>
         </Toolbar>
       </AppBar>
     </div>
