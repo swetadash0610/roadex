@@ -25,7 +25,7 @@ function createData(Locality, Remarks) {
 }
 
 const rows = [
-  createData('Frozen yoghurt', 'Frozen yoghurt'),
+  createData('John Doe', 'Frozen yoghurt'),
   createData('Ice cream sandwich','Frozen yoghurt'),
   createData('Eclair','Frozen yoghurt'),
   
@@ -40,8 +40,8 @@ export default function ComplaintsTable() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell> <h4>Locality</h4> </TableCell>
-            <TableCell align="right"> <h4>Remarks</h4> </TableCell>
+            <TableCell> <h4>Name</h4> </TableCell>
+            <TableCell align="right"> <h4>Issue</h4> </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Login from './Login';
 import {Firebase} from '../../firebase/firebaseConfigs';
-import Navbar from '../Includes/Navbar/Navbar.js';
+import Home from '../Home/Home';
+import User from '../user/ComplaintForm';
+import Form from '../Form/main';
 
 export default function Auth() {
 	const [user, setUser] = useState('');
@@ -9,7 +11,7 @@ export default function Auth() {
 	const [password, setPassword] = useState('');
 	const [emailError, setEmailError] = useState('');
 	const [passwordError, setPasswordError] = useState('');
-	const [hasAccount, setHasAccount] = useState(false);
+	const [hasAccount, setHasAccount] = useState(true);
 
 	const clearInputs = () => {
 		setEmail('');
@@ -82,7 +84,7 @@ export default function Auth() {
 	return (
 		<div>
 		 { user ? (
-   <Navbar handleLogout={handleLogout} />
+   <Form handleLogout={handleLogout} />
 		) : (
   <Login
 			email={email}

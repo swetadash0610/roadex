@@ -6,6 +6,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 import "./Fstyle.css";
 import Form2 from './formNew/UserForm';
+import {Link} from 'react-router-dom';
+import Nav from '../Includes/Navbar/Navbar'
+import Foot from '../Includes/Footer/Footer'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 var issues_ar = [];
-function MainForm() {
+function MainForm({handleLogout}) {
     const classes = useStyles();
     const baseUrl = "/get-all-complaints"
     const [clicked, setclicked] = useState(false);
@@ -56,6 +59,7 @@ function MainForm() {
 
     return (
         <div>
+        <Nav handleLogout={handleLogout} />
             <div className="head">
                 HELP DESK
             </div>
@@ -66,7 +70,9 @@ function MainForm() {
                 <TextField id="pin" label="PIN" />
             </form>
 
+            <Link to='/comp'>
             <Button className="reg-btn" onClick={fetchcomplaints} variant="contained" color="primary"> Click to Register </Button>
+            </Link>
             
             {
                 got && (
@@ -111,7 +117,7 @@ function MainForm() {
                 )
             }
 
-
+            <Foot />
             {/* <IForm /> */}
         </div>
     )

@@ -7,6 +7,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Location from "./Location"
+import {Link} from 'react-router-dom'
 
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
@@ -66,9 +67,10 @@ export default function FormDialog() {
 
   return (
     <div>
-      <Button variant="contained" size="large" color="primary" onClick={handleClickOpen}>
+    <Button variant="contained" size="large" color="primary" onClick={handleClickOpen}>
       Register a complaint
       </Button>
+      
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Open an issue</DialogTitle>
         <DialogContent>
@@ -118,9 +120,11 @@ export default function FormDialog() {
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
+          <Link to='/success'>
           <Button onClick={handleClose} color="primary">
-            Submit
-          </Button>
+                Submit
+              </Button>
+      </Link>
         </DialogActions>
       </Dialog>
     </div>

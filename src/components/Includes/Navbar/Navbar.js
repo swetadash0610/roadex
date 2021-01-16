@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
+import {Link} from 'react-router-dom'
 
 import "./Navbar.css"
 
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Navbar() {
+export default function Navbar({handleLogout}) {
   const classes = useStyles();
 
   return (
@@ -38,7 +39,9 @@ export default function Navbar() {
           <Typography variant="h6" className={classes.title}>
             Roadex
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Link to='/'>
+          <Button color="inherit" onClick={handleLogout}>LOGOUT</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

@@ -397,6 +397,7 @@ function Admin() {
   return (
     <div >
       <Nav />
+      <h2>Complaint List</h2>
       <Styles className="container" >
       <Table  columns={columns} data={data} />
     </Styles>

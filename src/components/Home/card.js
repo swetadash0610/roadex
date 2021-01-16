@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles({
   root: {
@@ -32,6 +33,9 @@ const useStyles = makeStyles({
 export default function SimpleCard(props) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
+  const {text , status} = props;
+  if(status === "user") localStorage.setItem("status", "user");
+  else localStorage.setItem("status", "admin");
 
   return (
     <Card className={classes.root}>
@@ -40,7 +44,7 @@ export default function SimpleCard(props) {
           <b>----------</b>
         </Typography>
         <Typography variant="h5" component="h2">
-          {props.text}
+          {text}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
         <b>----------</b>
@@ -52,7 +56,9 @@ export default function SimpleCard(props) {
         </Typography>
       </CardContent>
       <CardActions className={classes.btn}>
+      <Link to='/auth'>
         <Button size="small" variant='contained' color="primary" >LOGIN</Button>
+        </Link>
       </CardActions>
     </Card>
   );
