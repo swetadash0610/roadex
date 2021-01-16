@@ -16,7 +16,8 @@ let config = {
   measurementId: "G-LG98PCB2EP"
 }
 
-firebase.initializeApp(config)
+// firebase.initializeApp(config)
+export const Firebase = firebase.initializeApp(config);
 const storage = firebase.storage()
 const db = firebase.firestore();
 
