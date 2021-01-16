@@ -8,8 +8,9 @@ import Auth from "./components/auth/Auth";
 import Comp from './components/user/ComplaintForm';
 import Head from './components/Includes/Navbar/Navbar';
 import Foot from './components/Includes/Footer/Footer';
+import Success from './components/Form/formNew/Success';
 
-function Routes() { 
+function Routes({handleLogout}) { 
     const [uname, setuname] = useState("devi");
     const [ready, setready] = useState(true)
 
@@ -23,9 +24,8 @@ function Routes() {
                     
                     { ready && 
                     ( <Switch>
-                        <Route exact path='/' component={()=> <Home />} />
-                        {/* {/* <Route exact path='/login' component={Login} /> */}
-                        <Route exact path='/register' component={Auth} /> 
+                        <Route exact path='/' component={Auth} />
+                        {/* <Route exact path='/auth' component={Auth} />  */}
                         <Route exact path='/user' component={Form} />
                         <Route exact path='/admin' component={Admin} />
                         <Route exact path='/admin/details' component={Details} /> 
@@ -34,6 +34,7 @@ function Routes() {
                             <Comp />
                             <Foot/>
                         </Route>
+                        <Route exact path='/success' component={Success} />
                         <Route component={Notfound} />
                     </Switch> 
                     )}
