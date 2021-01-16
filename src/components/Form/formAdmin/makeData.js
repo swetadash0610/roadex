@@ -1,6 +1,7 @@
 import namor from 'namor'
 import React,{ useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 const range = len => {
   const arr = []
@@ -34,7 +35,7 @@ const newPerson = () => {
     details:<div >
               {
                   !x &&  
-                  (<button onClick={redirect}>Click</button>)
+                  (<Button  onClick={redirect}>Click</Button>)
               }
               {
                    x && (<div> 

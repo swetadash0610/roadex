@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { useTable, useFilters, useGlobalFilter, useAsyncDebounce } from 'react-table'
 // A great library for fuzzy filtering/sorting items
-import matchSorter from 'match-sorter'
-
+import Nav from '../../Includes/Navbar/Navbar';
+import Foo from '../../Includes/Footer/Footer';
+import matchSorter from 'match-sorter';
+import TextField from '@material-ui/core/TextField';
 import makeData from './makeData'
+import Button from '@material-ui/core/Button';
 
 const Styles = styled.div`
   padding: 1rem;
@@ -50,17 +53,15 @@ function GlobalFilter({
   return (
     <span>
       Search:{' '}
-      <input
+      <TextField
         value={value || ""}
         onChange={e => {
           setValue(e.target.value);
           onChange(e.target.value);
         }}
         placeholder={`${count} records...`}
-        style={{
-          fontSize: '1.1rem',
-          border: '0',
-        }}
+        margin="dense"
+        variant="outlined"
       />
     </span>
   )
@@ -73,12 +74,14 @@ function DefaultColumnFilter({
   const count = preFilteredRows.length
 
   return (
-    <input
+    <TextField
       value={filterValue || ''}
       onChange={e => {
         setFilter(e.target.value || undefined) // Set undefined to remove the filter entirely
       }}
       placeholder={`Search ${count} records...`}
+      margin="dense"
+        variant="outlined"
     />
   )
 }
@@ -137,7 +140,7 @@ function SliderColumnFilter({
 
   return (
     <>
-      <input
+      <TextField
         type="range"
         min={min}
         max={max}
@@ -145,8 +148,10 @@ function SliderColumnFilter({
         onChange={e => {
           setFilter(parseInt(e.target.value, 10))
         }}
+        margin="dense"
+        variant="outlined"
       />
-      <button onClick={() => setFilter(undefined)}>Off</button>
+      <Button onClick={() => setFilter(undefined)}>Off</Button>
     </>
   )
 }
@@ -173,7 +178,7 @@ function NumberRangeColumnFilter({
         display: 'flex',
       }}
     >
-      <input
+      <TextField
         value={filterValue[0] || ''}
         type="number"
         onChange={e => {
@@ -181,13 +186,11 @@ function NumberRangeColumnFilter({
           setFilter((old = []) => [val ? parseInt(val, 10) : undefined, old[1]])
         }}
         placeholder={`Min (${min})`}
-        style={{
-          width: '70px',
-          marginRight: '0.5rem',
-        }}
+        margin="dense"
+        variant="outlined"
       />
       to
-      <input
+      <TextField
         value={filterValue[1] || ''}
         type="number"
         onChange={e => {
@@ -195,10 +198,8 @@ function NumberRangeColumnFilter({
           setFilter((old = []) => [old[0], val ? parseInt(val, 10) : undefined])
         }}
         placeholder={`Max (${max})`}
-        style={{
-          width: '70px',
-          marginLeft: '0.5rem',
-        }}
+        margin="dense"
+        variant="outlined"
       />
     </div>
   )
@@ -391,12 +392,17 @@ function Admin() {
     []
   )
 
-  const data = React.useMemo(() => makeData(100000), [])
+  const data = React.useMemo(() => makeData(100), [])
 
   return (
-    <Styles>
-      <Table columns={columns} data={data} />
+    <div >
+      <Nav />
+      <Styles className="container" >
+      <Table  columns={columns} data={data} />
     </Styles>
+    <Foo />
+    </div>
+    
   )
 }
 
