@@ -13,9 +13,11 @@ const range = len => {
 const newPerson = () => {
 
   const statusChance = Math.random()
-  const [x,setx]=useState(false);
+  // const [x,setx]=useState(false);
+  var x = false;
   const redirect =() =>{
-     setx(true);
+    console.log("redirect");
+    //  setx(true);
    }
   return {
     name: namor.generate({ words: 1, numbers: 0 }),
@@ -36,8 +38,9 @@ const newPerson = () => {
               }
               {
                    x && (<div> 
-                         hi </div>) 
-                   
+                         hi 
+                         </div>
+                        ) 
               }
             </div>,    
   }
