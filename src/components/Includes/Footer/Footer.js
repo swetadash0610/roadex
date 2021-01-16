@@ -11,17 +11,12 @@ const Footer = () =>{
                 <div className="row">
                     <div className="col-xl-4 col-lg-4 col-sm-12">
                         <div className="footer-widget">
-                            <div className="footer-logo">
-                                <h3 className="title">Roadex</h3>
+                            <div className="footer-logo container">
+                                <h3 className="title" >Roadex</h3>
                             </div>
                             <div className="footer-text">
                                 <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Roadex provides a common platform to involve people and muncipality agency to make the road development process easier and more transparent
                                 </p>
                             </div>
                             <div className="footer-social-icon mb-3">
@@ -40,7 +35,7 @@ const Footer = () =>{
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/events">Events</a></li>
-                                <li><a href="/inductions">Inductions</a></li>
+                                <li><a href="/agency">Agencies</a></li>
                                 <li><a href="/members">Members</a></li>
                                 <li><a href="/gallery">Gallery</a></li>
                             </ul>
@@ -51,10 +46,10 @@ const Footer = () =>{
                             <div className="footer-widget-heading">
                                 <h3>Contact us</h3>
                             </div>
-                            <ul className="contacter">
-                                <li className="contacts">heartbeats.nitr@gmail.com</li><br/>
-                                <li className="contacts">Swagat  8895895849</li>
-                                <li className="contacts">Anshuman  9437392009</li>
+                            <ul className="contacter container" >
+                                <li className="contacts ">Encoders.nitr@gmail.com</li><br/>
+                                <li className="contacts">Pratyush  8895895849</li>
+                                <li className="contacts">Debi  9437392009</li>
                             </ul>
                             
                         </div>
@@ -74,7 +69,7 @@ const Footer = () =>{
                 <div className="row">
                     <div className="col-12 text-center text-lg-left">
                         <div className="copyright-text mx-auto">
-                            <p>Copyright &copy; 2021, All Right Reserved. Developed by <a href="https://www.linkedin.com/in/swagat-kumar/" target="blank">Swagat Kumar</a> and <a href="https://www.linkedin.com/in/swetadash0610/" target="blank">Sweta Dash</a>. </p>
+                            <p>Copyright &copy; 2021, All Right Reserved. Developed by Team Encoders </p>
                             
                         </div>
                     </div>

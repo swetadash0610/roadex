@@ -78,3 +78,30 @@
     }
   }
   
+  .body {
+    min-height: 600px;
+  }
+  .bg-home {
+    width: 100%;
+    max-height: max-content;
+    padding-bottom: 5%;
+    background-image: url('../../images/im7.jpg');
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    /* object-fit: contain; */
+    
+    z-index: 10000;
+}
+
+.panel{
+  display: flex;
+  justify-content: center;
+}
+
+.panel-solo{
+  margin-top: 50px;
+  padding: 40px;
+}

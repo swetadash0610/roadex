@@ -1,0 +1,58 @@
+.c-box {
+    background-color: rgb(160, 36, 150);
+    margin: auto;
+    width: fit-content;
+    padding: 5px 9px;
+    border-radius: 10px;
+}
+.head {
+    background-color: rgb(233, 138, 104);
+    color: black;
+    font-style: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.reg-btn{
+    margin-bottom: 20px;
+}
+.complaint-outer{
+    padding-top: 15px;
+    margin: auto;
+    max-width: 90%;
+}
+.comp-box {
+    margin: auto;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.comp-inner-left {
+    margin-top: 10px;
+    border-style: dashed;
+    border-radius: 10px;
+    border-color: rgb(219, 173, 47);
+    text-align: left;
+    padding-left: 10px;
+    width: 80%;
+}
+.comp-inner-right {
+    margin-top: 10px;
+    padding-top: 6px;
+    width: 20%;
+}
+.btn{
+    background-color: crimson;
+    border-radius: 10px;
+    font-weight: bolder; 
+}
+.btn:hover{
+    background-color: rgb(214, 63, 91);
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.txt-la{
+    color: rgb(214, 129, 68);
+}
